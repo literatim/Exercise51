@@ -26,8 +26,9 @@ namespace Exercise51
 
                 var userSelection = GetUserInput();
 
-
-                Console.WriteLine($"{userSelection} in Spanish is {spanglishDictionary[userSelection]}.");
+                Console.WriteLine(spanglishDictionary.ContainsKey(userSelection) == false
+                    ? $"{userSelection} cannot be translated."
+                    : $"{userSelection} in Spanish is {spanglishDictionary[userSelection]}.");
 
                 Console.WriteLine($"Do you want to continue? (y/n)");
 
